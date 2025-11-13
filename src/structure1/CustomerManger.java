@@ -111,6 +111,7 @@ customers.setCustomerID(customerID);
         if (customer.empty()) {
             return true;
         } else {
+           customer.findFirst();
             while (!customer.last()) {
                 if (customer.retrieve().getCustomerID() != customerID) {
                     customer.findNext();
